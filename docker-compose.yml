@@ -1,5 +1,6 @@
 version: '3'
 
+#if problem version cant detect version 3 read this https://github.com/bigbluebutton/greenlight/issues/228#issuecomment-545919537
 #thanks to : https://medium.com/gdgsrilanka/running-jenkins-on-docker-for-a-newbie-855ad376500b
 
 services:
