@@ -19,9 +19,9 @@ services:
     networks:
       - jenkins
     volumes:
-      - jenkins-data:/var/jenkins_home
-      - jenkins-docker-certs:/certs/client:ro
+      - /jenkins_home:/var/jenkins_home
       - /var/run/docker.sock:/var/run/docker.sock
+      - $(which docker):/usr/bin/docker
     ports:
       - "8080:8080"
 
