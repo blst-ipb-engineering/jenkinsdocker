@@ -13,9 +13,7 @@ services:
     restart: unless-stopped
     tty: true
     environment:
-      DOCKER_HOST: tcp://docker:2376
-      DOCKER_CERT_PATH: /certs/client
-      DOCKER_TLS_VERIFY: 1
+      JENKINS_USER: root    
     networks:
       - jenkins
     volumes:
