@@ -12,14 +12,16 @@ services:
     container_name: jenkinsmasterdocker
     restart: unless-stopped
     tty: true
+    environment:
+      JENKINS_USER: root
     networks:
       - jenkins
     volumes:
-      - jenkinsnewdata:/var/jenkins_home
+      - jenkinsmasterdata:/var/jenkins_home
       - /var/run/docker.sock:/var/run/docker.sock
       - /usr/bin/docker:/usr/bin/docker
     ports:
-      - "9090:8080"
+      - "8080:8080"
 
 # Docker Network
 networks:
@@ -28,5 +30,5 @@ networks:
 
 #Volumes
 volumes:
-  jenkinsnewdata:
+  jenkinsmasterdata:
     driver: local
