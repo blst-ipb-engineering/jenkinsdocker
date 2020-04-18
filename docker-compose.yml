@@ -21,7 +21,7 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
       - /usr/bin/docker:/usr/bin/docker
     ports:
-      - "8080:8080"
+      - "9090:8080"
 
 # Docker Network
 networks:
