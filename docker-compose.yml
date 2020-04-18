@@ -13,7 +13,7 @@ services:
     restart: unless-stopped
     tty: true
     environment:
-      JENKINS_USER: root    
+      JENKINS_USER: root
     networks:
       - jenkins
     volumes:
@@ -31,6 +31,4 @@ networks:
 #Volumes
 volumes:
   jenkins-data:
-    driver: local
-  jenkins-docker-certs:
     driver: local
