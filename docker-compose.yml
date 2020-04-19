@@ -12,10 +12,12 @@ services:
     container_name: jenkinsmasterdocker
     restart: unless-stopped
     tty: true
+    environment:
+      JENKINS_HOME: /root/jenkins_home
     networks:
       - jenkins
     volumes:
-      - ./juenkinshome:/var/jenkins_home
+      - /root/jenkins_home:/var/jenkins_home
       - /var/run/docker.sock:/var/run/docker.sock
       - /usr/bin/docker:/usr/bin/docker
     ports:
