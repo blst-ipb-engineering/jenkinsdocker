@@ -11,9 +11,7 @@ services:
     image: blst/jenkinsdocker
     container_name: jenkinsmasterdocker
     restart: unless-stopped
-    tty: true
-    environment:
-      JENKINS_HOME: /root/jenkins_home
+    tty: true    
     networks:
       - jenkins
     volumes:
