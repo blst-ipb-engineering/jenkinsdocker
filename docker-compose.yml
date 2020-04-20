@@ -15,11 +15,9 @@ services:
     networks:
       - jenkins
     volumes:
-      - /root/jenkinswoy:/var/jenkins_home
+      - jenkinsnewdata:/var/jenkins_home
       - /var/run/docker.sock:/var/run/docker.sock
       - /usr/bin/docker:/usr/bin/docker
-    environment:
-      JENKINS_HOME: "/root/jenkinswoy"
     ports:
       - "9090:8080"
 
