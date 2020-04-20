@@ -19,7 +19,7 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
       - /usr/bin/docker:/usr/bin/docker
     environment:
-      JENKINS_HOST_HOME: "/root/jenkinswoy"
+      JENKINS_HOME: "/root/jenkinswoy"
     ports:
       - "9090:8080"
 
